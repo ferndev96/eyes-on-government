@@ -1,0 +1,81 @@
+{
+  "_source": "Extracted 2026-10-10 from https://eyesongovernment.com (WordPress page id 23 'Select State and City' widget + page id 144 /el-paso-texas/). The original picker is static HTML (hard-coded <select> options, no API); the 'View Forum(s)' button always links to /el-paso-texas/.",
+  "states": [
+    {
+      "code": "TX",
+      "name": "Texas",
+      "cities": [
+        {
+          "name": "El Paso",
+          "slug": "el-paso-texas",
+          "page": "/el-paso-texas/",
+          "originalUrl": "https://eyesongovernment.com/el-paso-texas/",
+          "intro": "In the list below, you will find the forum videos for the elected office contests in El Paso, Texas.",
+          "officials": [],
+          "forums": [],
+          "interviews": [
+            {
+              "title": "Interview with El Paso City Appraisal Director Dinah Kilgore, May 2024",
+              "person": "Dinah Kilgore",
+              "role": "El Paso City Appraisal Director",
+              "date": "2024-05",
+              "provider": "youtube",
+              "youtubeId": "Wpc0dJKwek0",
+              "url": "https://www.youtube.com/watch?v=Wpc0dJKwek0",
+              "embedUrl": "https://www.youtube.com/embed/Wpc0dJKwek0",
+              "youtubeTitle": "Eyes On Government Interview",
+              "youtubeChannel": "Onlinepresence101",
+              "thumbnail": "/assets/img/yt-wpc0djkwek0.jpg"
+            },
+            {
+              "id": "eog-forum-2008",
+              "isForum": true,
+              "title": "Eyes On Government Special Edition: Exclusive Interviews with Sen. Hillary Clinton and Rep. Silvestre Reyes (2008)",
+              "description": "An Eyes On Government special edition hosted by Joe Oliva. Joe Oliva interviews Senator Hillary Clinton, campaigning in El Paso ahead of the 2008 Texas primary, and Congressman Silvestre Reyes. The conversations focus mostly on immigration reform, and also cover healthcare and adoption.",
+              "people": [
+                {
+                  "name": "Hillary Clinton",
+                  "role": "U.S. Senator"
+                },
+                {
+                  "name": "Silvestre Reyes",
+                  "role": "U.S. Congressman"
+                }
+              ],
+              "person": "Sen. Hillary Clinton and Rep. Silvestre Reyes",
+              "role": "Interviewed by Joe Oliva",
+              "date": "2008",
+              "topics": [
+                "immigration reform",
+                "healthcare",
+                "adoption"
+              ],
+              "provider": "self-hosted",
+              "duration": "7:22",
+              "videoUrl": "/assets/video/eog-forum-2008-clinton-reyes.mp4?v=20261010-3",
+              "url": "/el-paso-texas/#eog-forum-2008",
+              "thumbnail": "/assets/img/poster-clinton-oliva-2008.jpg",
+              "chapters": [
+                {
+                  "label": "Sen. Hillary Clinton",
+                  "start": 4.4,
+                  "end": 191.28
+                },
+                {
+                  "label": "Rep. Silvestre Reyes",
+                  "start": 218.26,
+                  "end": 434.87
+                }
+              ],
+              "source": "Supplied by the client (2026-10-10). Re-cut 2026-10-10: 5s Eyes On Government opener (no VO, CC0 music) + interview body (source 0:16.07-7:27.03, deinterlaced, -16 LUFS) + 7s Eyes On Government end card (thanks to Congressman Silvestre Reyes and Jesus (Chuy) Reyes). Original Ray Pearson intro and blue credits removed; spoken mentions of the Ray Pearson Forum inside the interviews remain."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_notes": [
+    "No officials are listed anywhere on the live site; 'officials' is intentionally empty.",
+    "Forum video 'eog-forum-2008' was supplied by the client on 2026-10-10 (not on the old site). The El Paso page's other forum videos were never published."
+  ]
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://eyesongovernment.com/sitemap.xml
