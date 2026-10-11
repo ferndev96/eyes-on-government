@@ -1,0 +1,37 @@
+name: Import missing videos
+on:
+  push:
+    paths:
+      - '.github/workflows/import-videos.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify videos
+        shell: python
+        run: |
+          import pathlib, urllib.request
+          files = {
+              "intro-eog-branded-v3.mp4": 5049512,
+              "eog-forum-2008-clinton-reyes.mp4": 46572675,
+          }
+          folder = pathlib.Path("assets/video")
+          folder.mkdir(parents=True, exist_ok=True)
+          for name, expected_size in files.items():
+              target = folder / name
+              urllib.request.urlretrieve("https://eyesongovernment.netlify.app/assets/video/" + name, target)
+              assert target.stat().st_size == expected_size, f"Incorrect size for {name}"
+              with target.open("rb") as stream:
+                  assert b"ftyp" in stream.read(32), f"Invalid MP4 for {name}"
+              print(f"Verified {name}: {expected_size} bytes")
+      - name: Commit videos and remove import job
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/video/
+          git rm .github/workflows/import-videos.yml
+          git commit -m "Add missing intro and Clinton-Reyes MP4 videos"
+          git push origin HEAD:main
